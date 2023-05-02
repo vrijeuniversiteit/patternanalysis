@@ -3,23 +3,12 @@ from setuptools import setup, find_packages
 setup(
 	name='patternanalysis',
 	version="1.0.0",
-	url='https://github.com/vrijeuniversiteit/vrgaze.git',
+	url='https://github.com/vrijeuniversiteit/patternanalysis.git',
 	author='Daniel Müller',
 	author_email='d.muller at vu.nl',
-	description='Analysis pipelines for virtual reality experiments',
+	description='Analyzing temporal patterns in timeseries data',
 	packages=find_packages(),
-	package_data={
-		'vrgaze': [
-			'example_data/tennis_data/*',
-			'example_data/tennis_data/experimental_condition/*',
-			'example_data/tennis_data/single_example_file/*'
-		]
-	},
-	install_requires=['matplotlib >= 3.6.2'],
-	extras_require={
-		'website': ['mkdocs-material>=8.5.11', 'mkdocstrings-python>=0.8.2'],
-		'dev': ['pre-commit >= 2.21']
-	},
+	install_requires=['numpy >= 1.24.0', 'tabulate >= 0.9.0'],
 	python_requires=">=3.6",
 	classifiers=[
 		"Programming Language :: Python :: 3",
